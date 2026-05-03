@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-pink: #ff1493;
+  --color-brand-pink-hover: #ff4db2;
+  --color-brand-black: #050505;
+  --color-brand-surface: #111111;
+  --font-sans: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-righteous), ui-sans-serif, system-ui, sans-serif;
+  --background-image-hero-mesh: radial-gradient(
+      ellipse 80% 60% at 70% 0%,
+      rgba(255, 20, 147, 0.22) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 10% 100%,
+      rgba(255, 20, 147, 0.12) 0%,
+      transparent 50%
+    );
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
